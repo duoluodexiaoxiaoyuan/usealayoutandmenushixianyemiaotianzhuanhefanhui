@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let test = [2, 2, 3, 4, 5];
+      let getValue = [1, 3];
+      //find() 方法返回通过测试（函数内判断）的数组的第一个元素的值
+      let a = test.find((item) => item > 3);
+      // 从test里面找有没有getValue里面的值，有就返回找到的第一个值
+      let c = test.find((item) => {
+        console.log(item);
+        console.log(getValue.indexOf(item) !== -1);
+        return getValue.indexOf(item) !== -1;
+      });
+      console.log(a); //4
+      console.log(c); //1
+
+      let b = test.find((item) => item == 0);
+      console.log(b); //undefined
+    </script>
+  </body>
+</html>
